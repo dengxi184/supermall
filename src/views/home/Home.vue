@@ -1,7 +1,10 @@
 <template>
   <div id="home">
     <nav-bar class="home-nav-bar">
-      <div slot="center">购物街</div>
+      <template v-slot:center>
+        <div>购物街</div>
+      </template>
+      
     </nav-bar>
 <!-- ref 是用于定位元素和取到组件的内容，:是绑定属性 @是绑定方法-->
     <scroller class="home-scroller" ref="scroller" :probe-type="3" @scroll="getPostion">
@@ -12,7 +15,7 @@
       <goods-list :cgoods="showGoods"/>
     </scroller>
 
-    <back-top @click.native="backTopClick" v-show="isShowBackTop" />
+    <back-top @click.enter="backTopClick" v-show="isShowBackTop" />
   </div>
 </template>
 

@@ -6,7 +6,6 @@ const Home = () => import('views/home/Home')
 const Category = () => import('views/category/Category')
 const Cart = () => import('views/cart/Cart')
 const Me = () => import('views/me/Me')
-
 Vue.use(VueRouter)
 const routes = [
   {
